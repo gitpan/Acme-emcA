@@ -1,11 +1,11 @@
 # $File: //member/autrijus/Acme-emcA/lib/Acme/emcA.pm $ $Author: autrijus $
-# $Revision: #2 $ $Change: 6926 $ $DateTime: 2003/07/11 00:49:54 $
+# $Revision: #4 $ $Change: 8744 $ $DateTime: 2003/11/08 06:26:02 $
 
 package Acme::emcA;
 use strict qw[vars subs];
 use vars '$VERSION';
 
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 open 0 or print "Can't reverse '$0'\n" and exit;
 (my $code = join "", <0>) =~ s/.*?^(\s*);?use\s+Acme::emcA\s*(?: esu)?;\n//sm;
@@ -35,6 +35,11 @@ __END__
 =head1 NAME
 
 Acme::emcA - Acme::emcA
+
+=head1 VERSION
+
+This document describes version 0.04 of Acme::ComeFrom, released
+November 8, 2002.
 
 =head1 SYNOPSIS
 
@@ -66,7 +71,7 @@ Acme::emcA could not access the source file to modify it.
 
 =head1 SEE ALSO
 
-L<Acme::Palindrome> - Code and documentation nearly taken verbatim.
+L<Acme::Palindrome> - Code and documentation nearly taken verbatim from it.
 
 =head1 AUTHOR
 

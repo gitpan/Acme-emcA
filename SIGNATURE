@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.24.
+signed via the Module::Signature module, version 0.37.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,22 +14,22 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 edceff00771de442230f8984dac05d104594ca5b Changes
-SHA1 83701d957242915293b1833c6dd6c5c7f16cc849 MANIFEST
-SHA1 6018777c3eb1c77129d4ae4cd0860a94ee837db9 META.yml
-SHA1 32e281fa64382c2a3502b5770c8fc30e155bb321 Makefile.PL
+SHA1 267b980a13935987603d9963470a916477bc9c8e Changes
+SHA1 bc252fde18f6408047753fb55a85c5a90af7d740 MANIFEST
+SHA1 4f3c67ee48b82ce8c2eabf72ba95f8bc89699395 META.yml
+SHA1 05597dda05c896a7fbba0092dfef0b3808d8179e Makefile.PL
 SHA1 b22346535dcdbc90583cb4d4c276f99b6a39c745 README
-SHA1 336cbe105d8d58fff2eb8c901facf9af90c45d64 inc/Module/Install.pm
-SHA1 276ae59951d39d692be2a7a943a54c45f6822f16 inc/Module/Install/Base.pm
-SHA1 46018c3de5f415fdc86705842939a95e1a529c67 inc/Module/Install/MakeMaker.pm
-SHA1 9c2dae719494f6a08be49c80e3c05bcefb00441d inc/Module/Install/Makefile.pm
-SHA1 145c170fd271585e3ca05d6adf91db6d4c57884a inc/Module/Install/Metadata.pm
-SHA1 710ffcb3d12d1899493b9dc0aa41b57acc3bf29f lib/Acme/emcA.pm
-SHA1 489d97b3647f8025e7593906ef700dd5f9fd1f55 t/0use.t
+SHA1 8b4877cb0aae407fcb37a4ac31f2f943bfbe2fe4 inc/Module/Install.pm
+SHA1 019bccc5b2e364447c6e6e150d049ca2a216598e inc/Module/Install/Base.pm
+SHA1 8508e76cf6417588c0118ec85f7d56be15383c00 inc/Module/Install/Makefile.pm
+SHA1 ef550fd641db011c741402b799ace0a446f8d8ec inc/Module/Install/Metadata.pm
+SHA1 cacaacb7a113dd403e170faa525d7551cdb83c52 lib/Acme/emcA.pm
+SHA1 8965fc92840a68b7e22d1cd4f5eb290f378cbf55 t/0-signature.t
+SHA1 489d97b3647f8025e7593906ef700dd5f9fd1f55 t/1-basic.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.2 (FreeBSD)
+Version: GnuPG v1.2.3 (FreeBSD)
 
-iD8DBQE/Dg6ytLPdNzw1AaARAsKFAKCHDf3NPsJhSdKvWKOTphxWUOj4WwCfeYdb
-Y3wIOUuKeBfTrMGQxXtUZ8w=
-=f2sg
+iD8DBQE/rIz4tLPdNzw1AaARAvrtAJ0QWCxQF2Ibzl8ANEPPBYqjpWbunACfamjK
+SuQdBV1fLgYKm2PkuxsMiW0=
+=KPc4
 -----END PGP SIGNATURE-----

@@ -1,26 +1,15 @@
-#!/usr/bin/env perl
-# $File: //member/autrijus/.vimrc $ $Author: autrijus $
-# $Revision: #14 $ $Change: 4137 $ $DateTime: 2003/02/08 11:41:59 $
+#!/usr/bin/perl
+# $File: //member/autrijus/Acme-ComeFrom/Makefile.PL $ $Author: autrijus $
+# $Revision: #4 $ $Change: 8742 $ $DateTime: 2003/11/08 06:18:43 $
 
-require 5.001;
 use inc::Module::Install;
 
-WriteMakefile(
-    NAME	=> 'Acme::emcA',
-    VERSION	=> '0.01',
-);
+name		('Acme-emcA');
+author		('Autrijus Tang (autrijus@autrijus.org)');
+abstract	('Acme::emcA');
+version_from	('lib/Acme/emcA.pm');
+license		('perl');
+sign		(1);
 
-WriteMakefile (
-    AUTHOR		=> 'Autrijus Tang (autrijus@autrijus.org)',
-    ABSTRACT		=> 'Acme::emcA',
-    NAME		=> 'Acme::emcA',
-    VERSION_FROM	=> 'lib/Acme/emcA.pm',
-    DISTNAME		=> 'Acme-emcA',
-
-    dist		=> {
-        COMPRESS	=> 'gzip -9',
-        SUFFIX		=> '.gz',
-    },
-);
-
-1;
+&Meta->write;
+&Makefile->write;

@@ -1,0 +1,35 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.24.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It would check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 edceff00771de442230f8984dac05d104594ca5b Changes
+SHA1 83701d957242915293b1833c6dd6c5c7f16cc849 MANIFEST
+SHA1 6018777c3eb1c77129d4ae4cd0860a94ee837db9 META.yml
+SHA1 32e281fa64382c2a3502b5770c8fc30e155bb321 Makefile.PL
+SHA1 b22346535dcdbc90583cb4d4c276f99b6a39c745 README
+SHA1 336cbe105d8d58fff2eb8c901facf9af90c45d64 inc/Module/Install.pm
+SHA1 276ae59951d39d692be2a7a943a54c45f6822f16 inc/Module/Install/Base.pm
+SHA1 46018c3de5f415fdc86705842939a95e1a529c67 inc/Module/Install/MakeMaker.pm
+SHA1 9c2dae719494f6a08be49c80e3c05bcefb00441d inc/Module/Install/Makefile.pm
+SHA1 145c170fd271585e3ca05d6adf91db6d4c57884a inc/Module/Install/Metadata.pm
+SHA1 710ffcb3d12d1899493b9dc0aa41b57acc3bf29f lib/Acme/emcA.pm
+SHA1 489d97b3647f8025e7593906ef700dd5f9fd1f55 t/0use.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.2 (FreeBSD)
+
+iD8DBQE/Dg6ytLPdNzw1AaARAsKFAKCHDf3NPsJhSdKvWKOTphxWUOj4WwCfeYdb
+Y3wIOUuKeBfTrMGQxXtUZ8w=
+=f2sg
+-----END PGP SIGNATURE-----

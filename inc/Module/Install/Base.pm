@@ -1,8 +1,8 @@
-#line 1 "inc/Module/Install/Base.pm - /usr/local/lib/perl5/site_perl/5.8.1/Module/Install/Base.pm"
-# $File: //depot/cpan/Module-Install/lib/Module/Install/Base.pm $ $Author: autrijus $
-# $Revision: #9 $ $Change: 1665 $ $DateTime: 2003/08/18 07:52:47 $ vim: expandtab shiftwidth=4
-
+#line 1 "inc/Module/Install/Base.pm - /usr/local/lib/perl5/site_perl/5.8.7/Module/Install/Base.pm"
 package Module::Install::Base;
+
+# Suspend handler for "redefined" warnings
+BEGIN { my $w = $SIG{__WARN__}; $SIG{__WARN__} = sub { $w } };
 
 #line 31
 
@@ -52,6 +52,9 @@ sub DESTROY {}
 
 1;
 
+# Restore warning handler
+BEGIN { $SIG{__WARN__} = $SIG{__WARN__}->() };
+
 __END__
 
-#line 115
+#line 118

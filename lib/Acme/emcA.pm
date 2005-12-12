@@ -1,11 +1,10 @@
-# $File: //member/autrijus/Acme-emcA/lib/Acme/emcA.pm $ $Author: autrijus $
-# $Revision: #4 $ $Change: 8744 $ $DateTime: 2003/11/08 06:26:02 $
-
 package Acme::emcA;
+
+use 5.004;
 use strict qw[vars subs];
 use vars '$VERSION';
 
-$VERSION = '0.04';
+$VERSION = '0.05';
 
 open 0 or print "Can't reverse '$0'\n" and exit;
 (my $code = join "", <0>) =~ s/.*?^(\s*);?use\s+Acme::emcA\s*(?: esu)?;\n//sm;
@@ -38,8 +37,8 @@ Acme::emcA - Acme::emcA
 
 =head1 VERSION
 
-This document describes version 0.04 of Acme::ComeFrom, released
-November 8, 2002.
+This document describes version 0.05 of Acme::ComeFrom, released
+December 12, 2005.
 
 =head1 SYNOPSIS
 
@@ -75,11 +74,11 @@ L<Acme::Palindrome> - Code and documentation nearly taken verbatim from it.
 
 =head1 AUTHOR
 
-Autrijus Tang E<lt>autrijus@autrijus.orgE<gt>
+Audrey Tang E<lt>autrijus@autrijus.orgE<gt>
 
 =head1 COPYRIGHT
 
-Copyright 2003 by Autrijus Tang E<lt>autrijus@autrijus.orgE<gt>.
+Copyright 2003, 2005 by Audrey Tang E<lt>autrijus@autrijus.orgE<gt>.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.37.
+signed via the Module::Signature module, version 0.41.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,22 +14,25 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 267b980a13935987603d9963470a916477bc9c8e Changes
-SHA1 bc252fde18f6408047753fb55a85c5a90af7d740 MANIFEST
-SHA1 4f3c67ee48b82ce8c2eabf72ba95f8bc89699395 META.yml
-SHA1 05597dda05c896a7fbba0092dfef0b3808d8179e Makefile.PL
-SHA1 b22346535dcdbc90583cb4d4c276f99b6a39c745 README
-SHA1 8b4877cb0aae407fcb37a4ac31f2f943bfbe2fe4 inc/Module/Install.pm
-SHA1 019bccc5b2e364447c6e6e150d049ca2a216598e inc/Module/Install/Base.pm
-SHA1 8508e76cf6417588c0118ec85f7d56be15383c00 inc/Module/Install/Makefile.pm
-SHA1 ef550fd641db011c741402b799ace0a446f8d8ec inc/Module/Install/Metadata.pm
-SHA1 cacaacb7a113dd403e170faa525d7551cdb83c52 lib/Acme/emcA.pm
-SHA1 8965fc92840a68b7e22d1cd4f5eb290f378cbf55 t/0-signature.t
+SHA1 398cdedb61128745d879935e3606c4dcf8a2f78d Changes
+SHA1 9b414606cccfd0f83e251fa3611044ec1bd76cfc MANIFEST
+SHA1 b34d67dbd009f09c4e47e99fba928fa43b968f7e META.yml
+SHA1 b876c3301e066c2ba216859b53cfb06781740244 Makefile.PL
+SHA1 dcf1e81631bf17208647d128336bd158ab5b6308 README
+SHA1 32829941fe8117b8e79fd804cea5f66b1b669a16 inc/Module/Install.pm
+SHA1 489ba7fc8de4849958379bf4c91419d0c8576a85 inc/Module/Install/Base.pm
+SHA1 1ae0b64895f73745680a2c2950053f64ccc116cc inc/Module/Install/Can.pm
+SHA1 d097dedadac0edcafbee3a14c262e24089f5795e inc/Module/Install/Fetch.pm
+SHA1 2626114c3587f1341a410386a31d55ee62e630c4 inc/Module/Install/Makefile.pm
+SHA1 030270fd3511d2f047bcf9d1981233f7c4b0dc77 inc/Module/Install/Metadata.pm
+SHA1 8ee248d67d4c61a4f01e6a96c41afbd93be4c9ef inc/Module/Install/Win32.pm
+SHA1 3c099dd7fb73a49bcc489b152c3ca3c7a1b36427 inc/Module/Install/WriteAll.pm
+SHA1 0ec08675e58c818729c7308c0117f0c478f54c4a lib/Acme/emcA.pm
 SHA1 489d97b3647f8025e7593906ef700dd5f9fd1f55 t/1-basic.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.3 (FreeBSD)
+Version: GnuPG v1.4.2 (FreeBSD)
 
-iD8DBQE/rIz4tLPdNzw1AaARAvrtAJ0QWCxQF2Ibzl8ANEPPBYqjpWbunACfamjK
-SuQdBV1fLgYKm2PkuxsMiW0=
-=KPc4
+iD8DBQFDnWp7tLPdNzw1AaARAn+vAJ40NytHVm8VPhwnYB2FMJhno+OPRACdEEcO
+8rBTOmXTxLxP/wbZy0/s3xc=
+=UKAa
 -----END PGP SIGNATURE-----

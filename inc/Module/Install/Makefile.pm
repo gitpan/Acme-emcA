@@ -1,7 +1,4 @@
-#line 1 "inc/Module/Install/Makefile.pm - /usr/local/lib/perl5/site_perl/5.8.1/Module/Install/Makefile.pm"
-# $File: //depot/cpan/Module-Install/lib/Module/Install/Makefile.pm $ $Author: autrijus $
-# $Revision: #49 $ $Change: 1782 $ $DateTime: 2003/10/27 19:48:59 $ vim: expandtab shiftwidth=4
-
+#line 1 "inc/Module/Install/Makefile.pm - /usr/local/lib/perl5/site_perl/5.8.7/Module/Install/Makefile.pm"
 package Module::Install::Makefile;
 use Module::Install::Base; @ISA = qw(Module::Install::Base);
 
@@ -26,9 +23,21 @@ sub makemaker_args {
     $args;
 }
 
+sub build_subdirs {
+    my $self = shift;
+    my $subdirs = $self->makemaker_args->{DIR} ||= [];
+    for my $subdir (@_) {
+        push @$subdirs, $subdir;
+    }
+}
+
 sub clean_files {
     my $self = shift;
-    $self->makemaker_args( clean => { FILES => "@_ " } );
+    my $clean = $self->makemaker_args->{clean} ||= {};
+    %$clean = (
+        %$clean, 
+        FILES => join(" ", grep length, $clean->{FILES}, @_),
+    );
 }
 
 sub libs {
@@ -53,6 +62,11 @@ sub write {
     $args->{VERSION} = $self->version || $self->determine_VERSION($args);
     $args->{NAME} =~ s/-/::/g;
 
+    # Only call $self->tests if we haven't been given explicit
+    # tests from makemaker_args.
+    $args->{test} ||= {TESTS => $self->tests};
+
+
     if ($] >= 5.005) {
 	$args->{ABSTRACT} = $self->abstract;
 	$args->{AUTHOR} = $self->author;
@@ -72,8 +86,16 @@ sub write {
 
     # merge both kinds of requires into prereq_pm
     my $dir = ($args->{DIR} ||= []);
-    push @$dir, map "$self->{prefix}/$self->{bundle}/$_->[1]", @{$self->bundles}
-        if $self->bundles;
+    if ($self->bundles) {
+        push @$dir, map "$_->[1]", @{$self->bundles};
+        delete $prereq->{$_->[0]} for @{$self->bundles};
+    }
+
+    if (my $perl_version = $self->perl_version) {
+        eval "use $perl_version; 1"
+            or die "ERROR: perl: Version $] is installed, ".
+                   "but we need version >= $perl_version";
+    }
 
     my %args = map {($_ => $args->{$_})} grep {defined($args->{$_})} keys %$args;
 
@@ -131,4 +153,4 @@ sub postamble {
 
 __END__
 
-#line 263
+#line 286

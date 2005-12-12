@@ -1,13 +1,12 @@
 name: Acme-emcA
-version: 0.04
+version: 0.05
 abstract: Acme::emcA
-author: Autrijus Tang (autrijus@autrijus.org)
+author: Audrey Tang <autrijus@autrijus.org>
 license: perl
 distribution_type: module
+requires:
+  perl: 5.004
 no_index:
   directory:
     - inc
-private:
-  directory:
-    - inc
-generated_by: Module::Install version 0.27
+generated_by: Module::Install version 0.42

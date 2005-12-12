@@ -1,25 +1,14 @@
-____________________________________________________________________________
-[  8744] By: autrijus                              on 2003/11/08  06:26:02
-        Log: * This be 0.04.
-             * Modernise build system.
-	   + Makefile.PL t/0-signature.t
-	  +> t/1-basic.t
-	   - t/0use.t
-	   ! MANIFEST lib/Acme/emcA.pm
-____________________________________________________________________________
-[  6984] By: autrijus                              on 2003/07/15  21:53:35
-        Log: * 0.03
-	   ! lib/Acme/emcA.pm
-____________________________________________________________________________
-[  6927] By: autrijus                              on 2003/07/11  00:54:31
-        Log: * Changes.
-	   + Changes
-____________________________________________________________________________
-[  6926] By: autrijus                              on 2003/07/11  00:49:54
-        Log: * This be 0.01.
-	   + MANIFEST README t/0use.t
-	   ! lib/Acme/emcA.pm
-____________________________________________________________________________
-[  6925] By: autrijus                              on 2003/07/10  23:31:35
-        Log: * initial draft.
-	   + lib/Acme/emcA.pm
+[Changes for 0.05 - December 12, 2005]
+
+* Gaal Yahas reported a typo error in the POD file that
+  mentioned Acme::ComeFrom.
+
+* Modernise build system again.
+
+[Changes for 0.03 - November 8, 2003]
+
+* Modernise build system.
+
+[Changes for 0.01 - July 11, 2003]
+
+* Initial release.

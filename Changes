@@ -1,4 +1,4 @@
-[Changes for 0.05 - December 12, 2005]
+[Changes for 0.10 - December 12, 2005]
 
 * Gaal Yahas reported a typo error in the POD file that
   mentioned Acme::ComeFrom.

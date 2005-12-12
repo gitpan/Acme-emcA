@@ -1,5 +1,5 @@
 name: Acme-emcA
-version: 0.05
+version: 0.10
 abstract: Acme::emcA
 author: Audrey Tang <autrijus@autrijus.org>
 license: perl

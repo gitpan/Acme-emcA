@@ -7,18 +7,27 @@ use vars '$VERSION';
 $VERSION = '0.10';
 
 open 0 or print "Can't reverse '$0'\n" and exit;
-(my $code = join "", <0>) =~ s/.*?^(\s*);?use\s+Acme::emcA\s*(?: esu)?;\n//sm;
+( my $code = join "", <0> ) =~ s/.*?^(\s*);?use\s+Acme::emcA\s*(?: esu)?;\n//sm;
 my $max = 10 + length $1;
 local $SIG{__WARN__} = \&is_forward;
-do {eval forward($code); exit} if is_backward($code);
-open 0, ">$0" or print "Cannot reverse '$0'\n" and exit;
-$max = 10; $code = backward($code);
-$code = (" " x ($max - 10)). ";use Acme::emcA esu;\n". (" " x ($max * 2))."\n" . $code;
-print {0} $code . (join("\n", reverse split(/\n/, $code))), "\n" and exit;
+do { eval forward($code); exit } if is_backward($code);
+open 0, ">$0" or print "Can't reverse '$0'\n" and exit;
+$max  = 10;
+$code = backward($code);
+$code =
+    ( " " x ( $max - 10 ) )
+  . ";use Acme::emcA esu;\n"
+  . ( " " x ( $max * 2 ) ) . "\n"
+  . $code;
+print {0} $code . ( join( "\n", reverse split( /\n/, $code ) ) ), "\n" and exit;
 
-sub forward  { join("\n", map substr($_, $max), (split "\n", substr($_[0], 0, length($_[0])/2))) }
+sub forward {
+    join( "\n",
+        map substr( $_, $max ),
+        ( split "\n", substr( $_[0], 0, length( $_[0] ) / 2 ) ) );
+}
 
-sub is_forward  { $_[0] !~ /^ {20,}$/m }
+sub is_forward { $_[0] !~ /^ {20,}$/m }
 sub is_backward { $_[0] =~ s/\n?.*$// if $_[0] =~ /^ {20,}$/m }
 
 sub backward {
@@ -37,8 +46,8 @@ Acme::emcA - Acme::emcA
 
 =head1 VERSION
 
-This document describes version 0.10 of Acme::emcA, released
-December 12, 2005.
+This document describes version 0.11 of Acme::emcA, released
+October 14, 2007.
 
 =head1 SYNOPSIS
 
@@ -72,17 +81,30 @@ Acme::emcA could not access the source file to modify it.
 
 L<Acme::Palindrome> - Code and documentation nearly taken verbatim from it.
 
-=head1 AUTHOR
-
-Audrey Tang E<lt>autrijus@autrijus.orgE<gt>
-
 =head1 COPYRIGHT
 
-Copyright 2003, 2005 by Audrey Tang E<lt>autrijus@autrijus.orgE<gt>.
+Copyright 2003, 2005, 2007 by Audrey Tang E<lt>cpan@audreyt.orgE<gt>.
 
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+This software is released under the MIT license cited below.
 
-See L<http://www.perl.com/perl/misc/Artistic.html>
+=head2 The "MIT" License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
 
 =cut

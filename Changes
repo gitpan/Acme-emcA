@@ -1,7 +1,16 @@
+[Changes for 0.11 - October 14, 2007]
+
+* LICENSING CHANGE: This compilation and all individual files in it
+  are now under the permissive "MIT" license.
+
+* Corrected diagnostics to match the documentation.
+
+* Tidied up source code, test files, and this changelog.
+
 [Changes for 0.10 - December 12, 2005]
 
-* Gaal Yahas reported a typo error in the POD file that
-  mentioned Acme::ComeFrom.
+* Gaal Yahas reported a typo error in the module's POD that
+  incorrectly mentioned Acme::ComeFrom.
 
 * Modernise build system again.
 

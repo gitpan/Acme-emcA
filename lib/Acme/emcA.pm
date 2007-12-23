@@ -4,7 +4,7 @@ use 5.004;
 use strict qw[vars subs];
 use vars '$VERSION';
 
-$VERSION = '0.10';
+$VERSION = '0.10E0';
 
 open 0 or print "Can't reverse '$0'\n" and exit;
 ( my $code = join "", <0> ) =~ s/.*?^(\s*);?use\s+Acme::emcA\s*(?: esu)?;\n//sm;
@@ -46,8 +46,8 @@ Acme::emcA - Acme::emcA
 
 =head1 VERSION
 
-This document describes version 0.11 of Acme::emcA, released
-October 14, 2007.
+This document describes version 0.10E0 of Acme::emcA, released
+December 24, 2007.
 
 =head1 SYNOPSIS
 
